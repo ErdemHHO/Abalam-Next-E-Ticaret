@@ -1,0 +1,34 @@
+
+.commentCard {
+    font-size: small;
+    margin: 10px;
+    position: center;
+    flex: 1 1 17rem;
+    padding: 1.2rem;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    max-width: 100%;
+    margin-top: 50px;
+  }
+  .commentTitle {
+    font-size: large;
+    color: #f08d03;
+  }
+  .commentCardBody {
+    margin-top: 10px;
+    border-radius: 10%;
+  }
+  .commentCardImg {
+    width: 50%;
+    border-radius: 50%;
+  }
+  
+  .commentIcon {
+    transform: translateY(-50%);
+  }
+  .commentCardText {
+    font-size: smaller;
+  }

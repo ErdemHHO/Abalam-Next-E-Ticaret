@@ -1,0 +1,47 @@
+
+.gifCard1{
+    margin: 0;
+    background-color: #BD0D00;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.gifCard2{
+  margin: 0;
+  background-color: #4100C2;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.gifCard1:hover{
+    transform:  scale(1.02);
+    box-shadow: 0 0 30px #BD0D00;
+}
+
+.gifCard2:hover{
+  transform:  scale(1.02);
+  box-shadow: 0 0 30px #4100C2;
+}
+
+
+.gif{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text{ 
+    margin-top: 25%;
+    left: 50%;
+    color: white;
+}

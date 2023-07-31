@@ -1,0 +1,10 @@
+.swiper-button-prev,
+.swiper-button-next {
+  color: orange; /* Turuncu renk */
+}
+@media (max-width: 767px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none; /* Turuncu renk */
+  }
+}

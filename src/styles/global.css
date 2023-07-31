@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+body{ 
+  font-family: 'Noto Serif', serif !important;
+  color: #000;
+  background-color: #fff !important;
+}
+
+h2{
+  color: #f08d06 !important;
+  margin-bottom: 10px !important;
+}
+
+.main{
+  margin-top: 80px !important;
+  margin-bottom: 80px !important;
+}
+
+
+/* slick-arrows.css dosyasında arrowların stilini değiştirme */
+
+/* Sol arrow stilini değiştirme */
+.slick-prev {
+  left: 10px;
+  z-index: 1;
+}
+.slick-prev:before {
+  color: white; /* Arrow simgesinin rengi */
+  border-radius: 50%; /* Sol arrowın dışını ovallendirmek için border-radius */
+}
+.slick-prev:hover:before {
+  color: yellow; /* Arrow simgesinin hover rengi */
+}
+.slick-prev.slick-disabled:before {
+  opacity: 0.25; /* Devre dışı arrow simgesinin opaklığı */
+}
+
+/* Sağ arrow stilini değiştirme */
+.slick-next {
+  right: 10px;
+  z-index: 1;
+}
+.slick-next:before {
+  color: white; /* Arrow simgesinin rengi */
+  border-radius: 50%; /* Sağ arrowın dışını ovallendirmek için border-radius */
+}
+.slick-next:hover:before {
+  color: yellow; /* Arrow simgesinin hover rengi */
+}
+.slick-next.slick-disabled:before {
+  opacity: 0.25; /* Devre dışı arrow simgesinin opaklığı */
+}
+
+/* Arrowların arka plan rengini değiştirme */
+.slick-prev:before,
+.slick-next:before {
+  background-color: #F08D06; /* Arrowların arka plan rengi */
+}
+
+
+.modal-content {
+  max-width: 100% !important;
+}

@@ -1,0 +1,6 @@
+@media (max-width: 2000px) {
+  /* 767 */
+  .swiperContainer {
+    height: 500px; /* Slider'ın yüksekliği maksimum 500px olacak */
+  }
+}

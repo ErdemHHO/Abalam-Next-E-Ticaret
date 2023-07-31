@@ -1,0 +1,61 @@
+
+.bebekArabasiSlider{
+  background: linear-gradient(180deg, #fff 0%, #4100c20f 100%);
+}
+
+
+.images{
+  width: 230px;
+  height: 250px;
+}
+
+.slideItem {
+  position: relative;
+  /* Diğer stiller */
+}
+
+.imageContainer {
+  position: relative;
+  display: inline-block;
+  /* Diğer stiller */
+}
+
+.detailButton {
+  position: absolute;
+  display: flex;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.detailButton1{
+  font-size: 10px !important;
+  width: 130px;
+  height: 100%;
+}
+.detailButton2{
+  font-size: 10px !important;
+  width: 50px;
+  height: 100%;
+}
+
+
+.imageContainer:hover .detailButton {
+  opacity: 1;
+}
+
+.imageContainer:hover .images {
+  opacity: 0.5;
+}
+
+.list ul {
+  list-style-type:circle;
+}
+
+.list li:hover {
+  color: #f08d06;
+}
