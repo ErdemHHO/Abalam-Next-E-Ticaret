@@ -32,7 +32,7 @@ function index({ name, description }) {
             </div>
         </div>
         </div>
-        <h5 className={styles.commetTitle}>
+        <h5 className={styles.commentTitle}>
             {name}
         </h5>
         <div className={styles.commentCardText}>

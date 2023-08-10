@@ -9,13 +9,13 @@ import { FaChevronDown } from "react-icons/fa";
 
 const Navbar = () => {
   return (
-    <>
+    <div className={styles.navbar}>
       <nav id="top">
         {/* OffCANVAS BAŞLANGIÇ */}
         <div className="d-sm-inline d-md-none">
           <div className="offcanvas offcanvas-end" tabIndex="-1" style={{ width: "250px" }} id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
             <div className="offcanvas-header bg-dark py-0">
-              <p className="bg-dark text-white pt-3 small">CATEGORY</p>
+              <p className="bg-dark text-black pt-3 small">Abalam Turkiye</p>
               <button type="button" className="btn-close btn-close-white" data-bs-dismiss="offcanvas" style={{ color: "white" }}></button>
             </div>
             <div className="offcanvas-body p-0">
@@ -38,6 +38,20 @@ const Navbar = () => {
                   <Link href="/iletisim" className="text-decoration-none">
                     <span className="small text-dark p-3" data-bs-dismiss="offcanvas">
                       İletişim
+                    </span>
+                  </Link>
+                </li>
+                <li className="list-unstyled border-bottom p-2">
+                  <Link href="/vizyon" className="text-decoration-none">
+                    <span className="small text-dark p-3" data-bs-dismiss="offcanvas">
+                      Vizyon ve Misyon
+                    </span>
+                  </Link>
+                </li>
+                <li className="list-unstyled border-bottom p-2">
+                  <Link href="/teslimat" className="text-decoration-none">
+                    <span className="small text-dark p-3" data-bs-dismiss="offcanvas">
+                      Teslimat ve İade
                     </span>
                   </Link>
                 </li>
@@ -104,7 +118,7 @@ const Navbar = () => {
             {/* Logo */}
             <div className="col-4 col-md-3 col-lg-2 order-1 py-1 py-md-0">
               <Link href="/">
-                <Image src="/abalam-logo.png" alt="Logo" width={150} height={50} className={`${styles["img-logo"]}`} />
+                <Image src="/abalam-logo.png" alt="Logo" width={280} height={70} className={`${styles["img-logo"]}`} />
               </Link>
             </div>
             {/* Urun + Ara */}
@@ -142,7 +156,7 @@ const Navbar = () => {
                 </ul>
               </div>
               <form className={`d-flex ${styles["category-size"]}`}>
-                <input className={`form-control ${styles.searchRounded}`} type="search" placeholder="Search" aria-label="arama-metin-kutusu" />
+                <input className={`form-control ${styles.searchRounded}`} type="search" placeholder="Arayın" aria-label="arama-metin-kutusu" />
                 <button className={`btn btn-outline-light text-secondary ${styles.iconRounded}`} style={{ backgroundColor: "#EF8E01" }} type="button">
                   <Link className="" href="/">
                     <AiOutlineSearch className={`text-light ${styles.icon_search} `} style={{ fontSize: "24px" }} />
@@ -164,13 +178,13 @@ const Navbar = () => {
       </header>
 
       {/* <!--Header Bottom --> */}
-      <div className="container-fluid d-flex align-items-center d-none d-md-block" style={{ height: "49px", backgroundColor: "#EF8E01" }}>
+      <div className="container-fluid d-flex align-items-center d-none d-md-block border border-1" style={{ height: "50px", backgroundColor: "#fff" }}>
         <div className="container">
           <div className="row">
             <div className="col-md-3 col-sm-4 d-flex align-items-stretch">
               <div className="dropdown-center">
                 <Link href="/" className="text-decoration-none">
-                  <button className={` d-none d-sm-block h-100 border-0 rounded-pill text-center ${styles["all-categories"]}`} style={{ width: "17rem", backgroundColor: "#FDFF02" }}>
+                  <button className={` d-none d-sm-block h-100 border-1 rounded-pill text-center ${styles["all-categories"]}`} style={{ width: "17rem", backgroundColor: "#f0f0f0" }}>
                     <span className={`${styles.abalamtext_size}`}>ABALAM TÜRKİYE</span>
                   </button>
                 </Link>
@@ -180,22 +194,27 @@ const Navbar = () => {
               <ul className={`${styles["custom-menu"]}`}>
                 <li>
                   <Link href="/" className="text-decoration-none">
-                    <span className="text-white text-decoration-none me-3 h6">Anasayfa</span>
+                    <span className="text-black text-decoration-none me-3 h6">Anasayfa</span>
                   </Link>
                 </li>
                 <li>
                   <Link href="/hakkimizda" className="text-decoration-none">
-                    <span className="text-white text-decoration-none mx-4 h6">Hakkımızda</span>
+                    <span className="text-black text-decoration-none mx-4 h6">Hakkımızda</span>
                   </Link>
                 </li>
                 <li>
                   <Link href="/iletisim" className="text-decoration-none">
-                    <span className="text-white text-decoration-none mx-4 h6">İletişim</span>
+                    <span className="text-black text-decoration-none mx-4 h6">İletişim</span>
                   </Link>
                 </li>
                 <li>
                   <Link href="/vizyon" className="text-decoration-none">
-                    <span className="text-white text-decoration-none mx-4 h6">Vizyon</span>
+                    <span className="text-black text-decoration-none mx-4 h6">Vizyon ve Misyon</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/teslimat" className="text-decoration-none">
+                    <span className="text-black text-decoration-none mx-4 h6">Teslimat ve İade</span>
                   </Link>
                 </li>
               </ul>
@@ -203,7 +222,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

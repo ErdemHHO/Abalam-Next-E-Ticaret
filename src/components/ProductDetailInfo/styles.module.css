@@ -1,0 +1,12 @@
+.productDetailInfo{
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.productDetailInfo ul li {
+  font-size: small;
+}
+.productDetailInfo .price {
+  margin: 20px;
+  font-size: xx-large;
+}
