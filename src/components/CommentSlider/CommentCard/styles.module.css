@@ -15,7 +15,7 @@
   }
   .commentTitle {
     font-size: large;
-    color: #f08d03;
+    color: #f08d03 !important;
   }
   .commentCardBody {
     margin-top: 10px;

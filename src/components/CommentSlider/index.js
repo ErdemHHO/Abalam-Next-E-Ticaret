@@ -62,6 +62,7 @@ export default class MultipleItems extends Component {
 
     return (
       <div className={`${styles.commentSlider} mt-3 p-4 justify-content-center`} >
+        {/* <h2 className='text-center' >Sizden Gelenler</h2> */}
         <div className='p-2'>
           <Slider className={`${stylesSlick} container`}  {...settings} >
             {data.comments && data.comments.map((comment, index) => (

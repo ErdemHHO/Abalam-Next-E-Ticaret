@@ -5,7 +5,7 @@ import BrandSlider from '../components/BrandSlider'
 import GifCard from '../components/GifCard'
 import YurutecSlider from '../components/YurutecSlider'
 import BebekArabasiSlider from '../components/BebekArabasiSlider'
-import ProductCard from "../components/ProductCard/ProductCard";
+import ProductCard from "../components/ProductCard";
 import Slider from "../components/Slider/Slider";
 
 import * as api from '../api/index'
@@ -22,7 +22,7 @@ export default async function Home() {
 
     <div>
       <Slider announcements={announcements.announcements} />
-      <div className="container">
+      {/* <div className="container">
         <div className="row">
           {productData && productData.products.map((product) => (
             <div className="col-12 col-sm-6 col-md-6 col-lg-3 my-1">
@@ -30,7 +30,7 @@ export default async function Home() {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
       <div className='main'>
         <HomeCategoriesCard />
       </div>
