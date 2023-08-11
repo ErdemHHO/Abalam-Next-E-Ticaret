@@ -6,8 +6,11 @@ import { BsWhatsapp } from "react-icons/bs";
 
 import { FaBars } from "react-icons/fa";
 import { FaChevronDown } from "react-icons/fa";
+import * as api from "../../api/index";
 
-const Navbar = () => {
+const Navbar = async () => {
+  const category = await api.getCategoriesData();
+
   return (
     <div className={styles.navbar}>
       <nav id="top">
@@ -68,34 +71,16 @@ const Navbar = () => {
                           </span>
                         </Link>
                       </li>
-                      <li>
-                        <Link href="/" className="text-decoration-none">
-                          <span className="small text-dark text-decoration-none p-2 d-block ms-4" data-bs-dismiss="offcanvas">
-                            Bebek Arabaları
-                          </span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/" className="text-decoration-none">
-                          <span className="small text-dark text-decoration-none p-2 d-block ms-4" data-bs-dismiss="offcanvas">
-                            Yürüteçler
-                          </span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/" className="text-decoration-none">
-                          <span className="small text-dark text-decoration-none p-2 d-block ms-4" data-bs-dismiss="offcanvas">
-                            Pusetler
-                          </span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/yatak" className="text-decoration-none">
-                          <span className="small text-dark text-decoration-none p-2 d-block ms-4" data-bs-dismiss="offcanvas">
-                            Yataklar
-                          </span>
-                        </Link>
-                      </li>
+                      {category &&
+                        category.categories.map((item) => (
+                          <li key={item._id}>
+                            <Link href={`urunler/${item.slug}`} className="text-decoration-none">
+                              <span className="small text-dark text-decoration-none p-2 d-block ms-4" data-bs-dismiss="offcanvas">
+                                {item.name}
+                              </span>
+                            </Link>
+                          </li>
+                        ))}
                     </ul>
                   </div>
                 </li>
@@ -118,7 +103,7 @@ const Navbar = () => {
             {/* Logo */}
             <div className="col-4 col-md-3 col-lg-2 order-1 py-1 py-md-0">
               <Link href="/">
-                <Image src="/abalam-logo.png" alt="Logo" width={280} height={70} className={`${styles["img-logo"]}`} />
+                <Image src="/abalam-logo.png" alt="Logo" width={180} height={50} className={`${styles["img-logo"]}`} />
               </Link>
             </div>
             {/* Urun + Ara */}
@@ -129,30 +114,18 @@ const Navbar = () => {
                 </button>
                 <ul className="dropdown-menu overflow-auto" style={{ maxHeight: "268px" }} aria-labelledby="dropdownCenterBtn">
                   <li>
-                    <Link href="/" className="text-decoration-none">
+                    <Link href="/urunler" className="text-decoration-none">
                       <span className="dropdown-item ">Tüm Ürünler</span>
                     </Link>
                   </li>
-                  <li>
-                    <Link href="/" className="text-decoration-none">
-                      <span className="dropdown-item">Bebek Arabaları</span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/" className="text-decoration-none">
-                      <span className="dropdown-item">Yürüteçler</span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/" className="text-decoration-none">
-                      <span className="dropdown-item">Pusetler</span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/yatak" className="text-decoration-none">
-                      <span className="dropdown-item">Yataklar</span>
-                    </Link>
-                  </li>
+                  {category &&
+                    category.categories.map((item) => (
+                      <li key={item._id}>
+                        <Link href={`urunler/${item.slug}`} className="text-decoration-none">
+                          <span className="dropdown-item">{item.name}</span>
+                        </Link>
+                      </li>
+                    ))}
                 </ul>
               </div>
               <form className={`d-flex ${styles["category-size"]}`}>
@@ -184,7 +157,7 @@ const Navbar = () => {
             <div className="col-md-3 col-sm-4 d-flex align-items-stretch">
               <div className="dropdown-center">
                 <Link href="/" className="text-decoration-none">
-                  <button className={` d-none d-sm-block h-100 border-1 rounded-pill text-center ${styles["all-categories"]}`} style={{ width: "17rem", backgroundColor: "#f0f0f0" }}>
+                  <button className={` d-none d-sm-block h-100 border-1 rounded-pill text-center ${styles["all-categories"]}`} style={{ width: "12rem", backgroundColor: "#f0f0f0" }}>
                     <span className={`${styles.abalamtext_size}`}>ABALAM TÜRKİYE</span>
                   </button>
                 </Link>
@@ -207,12 +180,12 @@ const Navbar = () => {
                     <span className="text-black text-decoration-none mx-4 h6">İletişim</span>
                   </Link>
                 </li>
-                <li>
+                <li className="d-none d-lg-block">
                   <Link href="/vizyon" className="text-decoration-none">
                     <span className="text-black text-decoration-none mx-4 h6">Vizyon ve Misyon</span>
                   </Link>
                 </li>
-                <li>
+                <li className="d-none d-lg-block">
                   <Link href="/teslimat" className="text-decoration-none">
                     <span className="text-black text-decoration-none mx-4 h6">Teslimat ve İade</span>
                   </Link>

@@ -4,29 +4,26 @@
   margin: 0;
 }
 
-
-body{ 
-  font-family: 'Noto Serif', serif !important;
+body {
+  font-family: "Noto Serif", serif !important;
   color: #000;
   background-color: #fff !important;
 }
 
-h2{
+h2 {
   color: #f08d06 !important;
   margin-bottom: 10px !important;
 }
 
-h5{
-  color:#ffffff !important;
+h5 {
+  color: #ffffff !important;
   font-weight: bolder !important;
 }
 
-.main{
+.main {
   margin-top: 50px !important;
   margin-bottom: 50px !important;
 }
-
-
 
 /* slick-arrows.css dosyasında arrowların stilini değiştirme */
 
@@ -65,20 +62,16 @@ h5{
 /* Arrowların arka plan rengini değiştirme */
 .slick-prev:before,
 .slick-next:before {
-  background-color: #F08D06; /* Arrowların arka plan rengi */
+  background-color: #f08d06; /* Arrowların arka plan rengi */
 }
-
 
 .modal-content {
   max-width: 100% !important;
 }
 
-.link-without-underline{
+.link-without-underline {
   text-decoration: none !important;
 }
-
-
-
 
 /**********************************/
 /*********** Contact **********/
@@ -96,11 +89,11 @@ h5{
 }
 
 .contact .col-md-6:first-child {
-  background: #009BD3;
+  background: #009bd3;
 }
 
 .contact .col-md-6:last-child {
-  background: #FF9500;
+  background: #ff9500;
 }
 
 .contact .contact-info {
