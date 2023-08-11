@@ -1,9 +1,8 @@
-
 import "../styles/global.css";
 import Navbar from "../components/Navbar/Navbar.js";
 import Header from "../components/Navbar/Header.js";
-
-
+import Footer from "../components/Footer/Footer";
+import ScrollButton from "../components/ScrollButton/ScrollButton";
 
 export default function RootLayout({ children }) {
   return (
@@ -18,9 +17,11 @@ export default function RootLayout({ children }) {
         <link href="https://fonts.googleapis.com/css2?family=Cabin&family=Edu+SA+Beginner:wght@400;500&family=Noto+Serif&family=Roboto:ital,wght@1,500&display=swap" rel="stylesheet" />
       </head>
       <body>
-        <Header />  
+        <Header />
         <Navbar />
+        <ScrollButton />
         {children}
+        <Footer />
       </body>
     </html>
   );

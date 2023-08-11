@@ -17,14 +17,15 @@ const ProductCard = ({ data }) => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const product= {
+  const product = {
     title: data.title,
     price: data.price,
     old_price: data.old_price,
     image_urls: data.image_urls[0],
     hoverimage_urls: data.image_urls[1] ? data.image_urls[1] : data.image_urls[0],
     slug: data.slug,
-  }
+  };
+  const shortenedTitle = product.title.length > 60 ? product.title.substring(0, 60) + "..." : product.title;
 
   return (
     <div className="mt-2">
@@ -48,7 +49,7 @@ const ProductCard = ({ data }) => {
           </div>
         </div>
         <div className="d-flex flex-column justify-content-center my-1">
-          <p className="text-center h6">{product.title}</p>
+          <p className="text-center h6">{shortenedTitle}</p>
           <p className="text-center mt-1">
             <sup className="h6" style={{ textDecoration: "line-through" }}>
               {product.old_price} ₺
@@ -57,7 +58,7 @@ const ProductCard = ({ data }) => {
           </p>
           <div className="d-flex justify-content-center">
             <Link href={`/${product.slug}`}>
-              <Button variant="outline-success w-50">
+              <Button variant="outline-success w-75">
                 <AiFillCaretRight className={`text-success me-2 text-dark`} size={18} />
                 Detay
               </Button>

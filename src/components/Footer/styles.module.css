@@ -1,0 +1,77 @@
+.socialMedia div:hover {
+  color: #fff;
+  background-color: orange;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+/* styles.module.css */
+/* styles.module.css */
+
+/* .social_media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+} */
+
+.socialMedia {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  gap: 10px;
+}
+.abalamAllrights {
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+}
+
+@media (max-width: 767px) {
+  .logo {
+    width: 130px !important;
+    height: 60px !important;
+  }
+  .footerTextCenter {
+    text-align: center;
+  }
+
+  .socialMedia {
+    position: relative;
+    justify-content: center;
+    bottom: 0px;
+    right: auto;
+    gap: 20px;
+  }
+  .abalamAllrights {
+    position: absolute !important;
+    left: 0px;
+    right: 0px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.hoverOrangeBorder {
+  position: relative;
+  display: inline-block;
+  color: orange;
+}
+
+.hoverOrangeBorder::before {
+  content: "";
+  position: absolute;
+  bottom: -2px; /* Border altta kalsın */
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: orange;
+  transition: width 0.3s ease-in-out;
+}
+
+.hoverOrangeBorder:hover::before {
+  width: 100%;
+}
+.hoverOrange:hover {
+  color: orange !important;
+  transition: all 0.3s ease-in-out !important;
+}
