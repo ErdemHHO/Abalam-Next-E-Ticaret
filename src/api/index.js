@@ -1,123 +1,105 @@
-
-
-const api = "https://abalamturkiye.com/api"
-
-
+const api = "https://abalamturkiye.com/api";
 
 export async function getCommentData() {
-    const res = await fetch(`${api}/comment`,{
-        cache: 'no-store'
-    });
-    if (!res.ok) {
-        throw new Error('Failed to fetch data');
-    }
-    return res.json();
+  const res = await fetch(`${api}/comment`, {
+    cache: "no-store",
+  });
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+  return res.json();
 }
-
 
 export async function getProductData() {
-    const res = await fetch(`${api}/product`,{
-        cache: 'no-store'
-    });
-    if (!res.ok) {
-        throw new Error('Failed to fetch data');
-    }
-    return res.json();
+  const res = await fetch(`${api}/product`, {
+    cache: "no-store",
+  });
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+  return res.json();
 }
 
-
-
 export async function getAnnouncementData() {
-    const res = await fetch(`${api}/announcement`, {
-      cache: "no-store",
-    });
-    if (!res.ok) {
-      throw new Error("Failed to fetch data");
-    }
-    return res.json();
+  const res = await fetch(`${api}/announcement`, {
+    cache: "no-store",
+  });
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
   }
-  
-  export async function searchProductData(query) {
-    const res = await fetch(`${api}/product/search/q=${query}`, {
-      cache: "no-store",
-    });
-    if (!res.ok) {
-      throw new Error("Failed to fetch data");
-    }
-    return res.json();
+  return res.json();
+}
+
+export async function searchProductData(query) {
+  const res = await fetch(`${api}/product/search/q=${query}`, {
+    cache: "no-store",
+  });
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
   }
+  return res.json();
+}
 
-
-  export async function getCategoriesData() {
-    const res = await fetch(`${api}/category`, {
-      cache: "no-store",
-    });
-    if (!res.ok) {
-      throw new Error("Failed to fetch data");
-    }
-    return res.json();
+export async function getCategoriesData() {
+  const res = await fetch(`${api}/category`, {
+    cache: "no-store",
+  });
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
   }
+  return res.json();
+}
 
- 
-  export async function getProductDataByCategory(kategori) {
+export async function getProductDataByCategory(kategori) {
+  const id = kategori;
 
-    const id=kategori;
-
-    const res = await fetch(`${api}/category/${id}`, {
-      cache: "no-store",
-    });
-    if (!res.ok) {
-      throw new Error("Failed to fetch data");
-    }
-    return res.json();
+  const res = await fetch(`${api}/category/${id}`, {
+    cache: "no-store",
+  });
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
   }
+  return res.json();
+}
 
-  export async function getProductByCampaign(){
+export async function getProductByCampaign() {
+  const res = await fetch(`${api}/product/campaign`, {
+    cache: "no-store",
+  });
 
-    const res = await fetch(`${api}/product/campaign`, {
-      cache: "no-store",
-    });
-
-    if (!res.ok) {
-      throw new Error("Failed to fetch data");
-    }
-    return res.json();
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
   }
+  return res.json();
+}
 
-  export async function getProductByNew(){
+export async function getProductByNew() {
+  const res = await fetch(`${api}/product/new`, {
+    cache: "no-store",
+  });
 
-    const res = await fetch(`${api}/product/new`, {
-      cache: "no-store",
-    });
-
-    if (!res.ok) {
-      throw new Error("Failed to fetch data");
-    }
-    return res.json();
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
   }
+  return res.json();
+}
 
-  export async function getProductByFavorite(){
+export async function getProductByFavorite() {
+  const res = await fetch(`${api}/product/favorite`, {
+    cache: "no-store",
+  });
 
-    const res = await fetch(`${api}/product/favorite`, {
-      cache: "no-store",
-    });
-
-    if (!res.ok) {
-      throw new Error("Failed to fetch data");
-    }
-    return res.json();
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
   }
+  return res.json();
+}
 
+export async function getProductDataById(icerik) {
+  const id = icerik;
 
-
-  export async function getProductDataById(icerik) {
-
-    const id=icerik;
-
-    const res = await fetch(`${api}/product/${id}`, {
-      cache: "no-store",
-    });
-    return res.json();
-  }
-
-
+  const res = await fetch(`${api}/product/${id}`, {
+    cache: "no-store",
+  });
+  return res.json();
+}
