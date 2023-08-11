@@ -6,8 +6,8 @@ import styles from "./styles.module.css";
 import Image from "next/image";
 import { AiOutlineEye } from "react-icons/ai";
 import Button from "react-bootstrap/Button";
-import Modal from "react-bootstrap/Modal";
 import { AiFillCaretRight } from "react-icons/ai";
+import ProductCardModal from "./ProductCardModal";
 
 import Link from "next/link";
 
@@ -15,12 +15,15 @@ const ProductCard = ({ data }) => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const handleShow = (product) => {
+    setShow(true);
+  };
 
   const product = {
     title: data.title,
     price: data.price,
     old_price: data.old_price,
+    images: data.image_urls,
     image_urls: data.image_urls[0],
     hoverimage_urls: data.image_urls[1] ? data.image_urls[1] : data.image_urls[0],
     slug: data.slug,
@@ -29,19 +32,17 @@ const ProductCard = ({ data }) => {
 
   return (
     <div className="mt-2">
-      <Modal show={show} onHide={handleClose} centered>
-        <Modal.Header closeButton>
-          <Modal.Title> Başlık</Modal.Title>
-        </Modal.Header>
-        <Modal.Body> İçerik.</Modal.Body>
-        <Modal.Footer></Modal.Footer>
-      </Modal>
       <div className={`${styles.cardContainer} p-3 border rounded shadow-lg d-flex flex-column`}>
         <div className={styles["productCard"]}>
           <img src={product.hoverimage_urls} alt="Ürün Resmi" className="img-fluid" />
           {/* <Image src="/ana1.jpg" alt="Ürün Resmi" className="img-thumbnail" width={500} height={500} /> */}
           <div className={styles["hoverImage"]}>
-            <button className={styles["popup-btn"]} onClick={handleShow}>
+            <button 
+            className={styles["popup-btn"]} 
+            onClick={
+              () => handleShow(product)
+            }
+            >
               <AiOutlineEye className={styles.eyeIcons} size={35} />
             </button>
             <img src={product.image_urls} alt="Farklı Ürün Resmi" className="img-fluid" />
@@ -66,6 +67,7 @@ const ProductCard = ({ data }) => {
           </div>
         </div>
       </div>
+      {show && <ProductCardModal show={show} onClose={handleClose} product={product} />}
     </div>
   );
 };

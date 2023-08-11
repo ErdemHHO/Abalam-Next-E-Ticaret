@@ -10,7 +10,7 @@ import Link from 'next/link';
 function SidebarMenu({data}) {
 
   return (
-    <div>
+    <div className='d-none d-lg-block'>
       <ListGroup className='text-center mx-5'>
         <Link className='link-without-underline' href={"/urunler"} >
           <ListGroup.Item className='list-item'><span className='fw-bold'>Tüm Ürünler</span> </ListGroup.Item>
