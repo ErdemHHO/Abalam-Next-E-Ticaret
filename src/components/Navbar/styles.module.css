@@ -172,3 +172,12 @@
   border-top-left-radius: 0 !important; /* Sağ üst kenar yuvarlatmasını kaldırır */
   border-bottom-left-radius: 0 !important; /* Sağ alt kenar yuvarlatmasını kaldırır */
 }
+.socialMedia:hover {
+  color: #fff;
+  background-color: orange;
+  transition: all 0.3s ease-in-out;
+}
+.hoverOrange:hover span {
+  color: orange !important;
+  transition: all 0.3s ease-in-out !important;
+}

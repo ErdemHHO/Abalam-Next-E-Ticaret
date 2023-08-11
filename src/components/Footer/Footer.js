@@ -90,7 +90,7 @@ const Footer = () => {
         </div>
         <div className="position-absolute top-0 d-flex justify-content-center align-items-center rounded-circle" style={{ height: "6rem", marginTop: "-3rem", left: 0, right: 0, marginLeft: "auto", marginRight: "auto" }}>
           <p className="rotate-n45 m-0 text-uppercase" style={{ fontSize: "1.5rem" }}>
-            <Image className={`${styles.logo}`} src={"/abalam-logo.png"} width={180} height={80} />
+            <Image className={`${styles.logo}`} src={"/abalam-logo.png"} width={200} height={80} />
           </p>
         </div>
       </div>
