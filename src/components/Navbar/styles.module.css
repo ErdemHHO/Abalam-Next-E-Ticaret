@@ -1,10 +1,10 @@
-
-.navbar {
-  z-index: 999;
-  margin-bottom: 1px;
+/* styles.module.css */
+.sticky-navbar {
+  position: sticky;
+  top: 0;
+  background-color: white; /* Gerekirse arkaplan rengini ayarlayın */
+  z-index: 1000;
 }
-
-
 
 .nav-ul li {
   display: inline;
@@ -59,6 +59,9 @@
     padding: 0px !important;
     margin: 0px !important;
   }
+  .allcatego-none {
+    display: none !important;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -67,18 +70,18 @@
   }
 }
 @media (max-width: 992px) {
-  .all-categories {
+  /* .all-categories {
     width: 225px !important;
-  }
+  } */
   .alt-ul:first-child {
     margin-left: 20px !important;
   }
   .category-size {
     width: 100%;
   }
-  .allcatego-none {
+  /* .allcatego-none {
     display: none !important;
-  }
+  } */
   .abalamtext_size {
     font-size: 16px !important;
   }
@@ -86,14 +89,14 @@
 
 @media (max-width: 1200px) {
   .custom-menu li span {
-    font-size: 14px !important;
+    font-size: 13px !important;
   }
 
-  .all-categories {
+  /* .all-categories {
     width: 220px !important;
     padding-left: 1px !important;
     padding-right: 1px !important;
-  }
+  } */
   .all-categori {
     width: 225px !important;
   }
@@ -106,6 +109,18 @@
   .abalamtext_size {
     font-size: 16px !important;
     font-weight: bold !important;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .img-logo {
+    width: 160px !important;
+    height: 40px !important;
+  }
+  .all-categories {
+    width: 11rem !important;
+  }
+  .abalamtext_size {
+    font-size: 15px !important;
   }
 }
 

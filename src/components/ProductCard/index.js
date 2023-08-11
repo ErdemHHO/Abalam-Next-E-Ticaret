@@ -37,12 +37,7 @@ const ProductCard = ({ data }) => {
           <img src={product.hoverimage_urls} alt="Ürün Resmi" className="img-fluid" />
           {/* <Image src="/ana1.jpg" alt="Ürün Resmi" className="img-thumbnail" width={500} height={500} /> */}
           <div className={styles["hoverImage"]}>
-            <button 
-            className={styles["popup-btn"]} 
-            onClick={
-              () => handleShow(product)
-            }
-            >
+            <button className={styles["popup-btn"]} onClick={() => handleShow(product)}>
               <AiOutlineEye className={styles.eyeIcons} size={35} />
             </button>
             <img src={product.image_urls} alt="Farklı Ürün Resmi" className="img-fluid" />
@@ -58,7 +53,7 @@ const ProductCard = ({ data }) => {
             <span className="mx-2 text-success h5">{product.price} ₺</span>
           </p>
           <div className="d-flex justify-content-center">
-            <Link href={`/${product.slug}`}>
+            <Link className="w-100 d-flex justify-content-center text-decoration-none" href={`/${product.slug}`}>
               <Button variant="outline-success w-75">
                 <AiFillCaretRight className={`text-success me-2 text-dark`} size={18} />
                 Detay

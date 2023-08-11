@@ -1,12 +1,12 @@
 import React from "react";
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
 import ModalSlider from "./ModalSlider";
 
 import Link from "next/link";
 
-function index({ show, onClose ,product }) {
-  console.log(product);
+function index({ show, onClose, product }) {
+  console.log(product.slug);
   return (
     <div className="text-center">
       <Modal show={show} onHide={onClose}>
@@ -18,9 +18,7 @@ function index({ show, onClose ,product }) {
         </Modal.Body>
         <Modal.Footer className="text-center d-flex justify-content-center">
           <Link href={product.slug}>
-            <Button variant="outline-warning" >
-              Ürün Sayfasına Git
-            </Button>
+            <Button variant="outline-warning">Ürün Sayfasına Git</Button>
           </Link>
         </Modal.Footer>
       </Modal>
