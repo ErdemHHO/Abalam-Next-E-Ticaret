@@ -130,10 +130,10 @@ const Navbar = async () => {
               </div>
               <div className="col-lg-2 d-flex px-md-2 order-2 order-md-3 justify-content-end">
                 <div className="d-none d-lg-flex align-items-center ms-md-0 mb-2 mb-md-0">
-                  <Link className="text-decoration-none" href="https://api.whatsapp.com/send/?phone=%2B905388265436&text=Merhaba%21++%C3%9Cr%C3%BCnleriniz+hakk%C4%B1nda+bilgi+almak+istiyorum.&type=phone_number&app_absent=0">
+                  <Link className={`text-decoration-none ${styles.hoverOrange}`} href="https://api.whatsapp.com/send/?phone=%2B905388265436&text=Merhaba%21++%C3%9Cr%C3%BCnleriniz+hakk%C4%B1nda+bilgi+almak+istiyorum.&type=phone_number&app_absent=0">
                     {/* <Image src="/telefon.png" alt="Telefon Resmi" width={34} height={34} /> */}
                     <BsWhatsapp className={` ${styles["icon_wp"]}`} style={{ fontSize: "34px", color: "black" }} />
-                    <span className={`small text-black text-decoration-none pe-xl-2 ms-md-2 my-md-3 text-dark ${styles["number_size"]}`}>+90538 826 54 36</span>
+                    <span className={`small text-decoration-none pe-xl-2 ms-md-2 my-md-3 text-dark ${styles["number_size"]}`}>+90538 826 54 36</span>
                   </Link>
                 </div>
               </div>

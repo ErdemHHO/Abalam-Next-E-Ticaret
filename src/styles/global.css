@@ -206,10 +206,8 @@ h5 {
   color: #fff;
 }
 
-
-
 /**************** Sidebar CSS *****************/
-.list-item:hover{
+.list-item:hover {
   color: #ffffff !important;
   background-color: #f08d06 !important;
 }
