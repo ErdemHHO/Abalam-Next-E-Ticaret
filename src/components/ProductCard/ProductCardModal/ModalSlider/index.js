@@ -8,7 +8,6 @@ export default class CenterMode extends Component {
   render() {
     const { imageUrls } = this.props;
 
-
     const settings = {
       className: "center",
       centerMode: true,

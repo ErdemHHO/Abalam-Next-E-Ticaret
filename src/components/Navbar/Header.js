@@ -43,12 +43,11 @@ const Header = () => {
                   <AiFillMail className="p-1" style={{ fontSize: "24px", color: "black", marginRight: "5px" }} />
                   abalamturkiye@gmail.com
                 </Link>
-                <div className="btn-group">
+                {/* <div className="btn-group">
                   <button className="d-none d-lg-inline border-0 bg-light btn-sm dropdown-toggle border-end px-3 p-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <GrLanguage className="p-1" style={{ fontSize: "22px", color: "green" }} />
                   </button>
                   <button className="d-md-inline d-lg-none border-0 bg-light btn-sm dropdown-toggle px-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    {/* <img src="./img/tr-flag.png" alt="" /> */}
                     <Image src="/tr-flag.png" alt="Logo" width={16} height={11} />
                   </button>
                   <ul className="dropdown-menu">
@@ -68,7 +67,7 @@ const Header = () => {
                       </span>
                     </li>
                   </ul>
-                </div>
+                </div> */}
               </ul>
             </div>
           </div>

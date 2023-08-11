@@ -1,5 +1,3 @@
-
-
 import styles from "./styles.module.css";
 import Image from "next/image";
 import Link from "next/link";
@@ -7,21 +5,21 @@ import { BsWhatsapp } from "react-icons/bs";
 
 import { FaBars } from "react-icons/fa";
 import { FaChevronDown } from "react-icons/fa";
-import NavbarSearchInput from "./NavbarSearchInput";
+import NavbarSearchInput from "./NavbarSearchInput/NavbarSearchInput";
 import * as api from "../../api/index";
 
 const Navbar = async () => {
   const category = await api.getCategoriesData();
 
   return (
-    <div className={styles.navbar}>
-      <div >
+    <div className={`${styles["sticky-navbar"]}`}>
+      <div>
         <nav id="top">
           {/* OffCANVAS BAŞLANGIÇ */}
           <div className="d-sm-inline d-md-none">
             <div className="offcanvas offcanvas-end" tabIndex="-1" style={{ width: "250px" }} id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
               <div className="offcanvas-header bg-dark py-0">
-                <p className="bg-dark text-black pt-3 small">Abalam Turkiye</p>
+                <p className="bg-dark text-white pt-3 small">Abalam Turkiye</p>
                 <button type="button" className="btn-close btn-close-white" data-bs-dismiss="offcanvas" style={{ color: "white" }}></button>
               </div>
               <div className="offcanvas-body p-0">
@@ -103,11 +101,11 @@ const Navbar = async () => {
               {/* Logo */}
               <div className="col-4 col-md-3 col-lg-2 order-1 py-1 py-md-0">
                 <Link href="/">
-                  <Image src="/abalam-logo.png" alt="Logo" width={180} height={50} className={`${styles["img-logo"]}`} />
+                  <Image src="/abalam-logo.png" alt="Logo" width={190} height={50} className={`${styles["img-logo"]}`} />
                 </Link>
               </div>
               {/* Urun + Ara */}
-              <div className="col-md-6 col-12 d-flex order-3 order-md-2 justify-content-center" style={{ position: "relative" }}>
+              <div className="col-md-9 col-lg-6 col-12 d-flex order-3 order-md-2 justify-content-center" style={{ position: "relative" }}>
                 <div className={`dropdown-center border rounded-pill ${styles["allcatego-none"]}`}>
                   <button className={`btn dropdown-toggle px-4 ${styles["allcatego-none"]}`} type="button" id="dropdownCenterBtn" data-bs-toggle="dropdown" aria-expanded="false">
                     <span style={{ paddingRight: "1rem" }}> Urunlerimiz </span>
@@ -130,8 +128,8 @@ const Navbar = async () => {
                 </div>
                 <NavbarSearchInput />
               </div>
-              <div className="col-4 col-md-3 col-lg-2  d-flex px-md-2 order-2 order-md-3 justify-content-end">
-                <div className="d-none d-md-flex align-items-center ms-md-0 mb-2 mb-md-0">
+              <div className="col-lg-2 d-flex px-md-2 order-2 order-md-3 justify-content-end">
+                <div className="d-none d-lg-flex align-items-center ms-md-0 mb-2 mb-md-0">
                   <Link className="text-decoration-none" href="https://api.whatsapp.com/send/?phone=%2B905388265436&text=Merhaba%21++%C3%9Cr%C3%BCnleriniz+hakk%C4%B1nda+bilgi+almak+istiyorum.&type=phone_number&app_absent=0">
                     {/* <Image src="/telefon.png" alt="Telefon Resmi" width={34} height={34} /> */}
                     <BsWhatsapp className={` ${styles["icon_wp"]}`} style={{ fontSize: "34px", color: "black" }} />
@@ -171,14 +169,14 @@ const Navbar = async () => {
                       <span className="text-black text-decoration-none mx-4 h6">İletişim</span>
                     </Link>
                   </li>
-                  <li className="d-none d-lg-block">
+                  <li className="">
                     <Link href="/vizyon" className="text-decoration-none">
-                      <span className="text-black text-decoration-none mx-4 h6">Vizyon ve Misyon</span>
+                      <span className="text-black text-decoration-none mx-4 h6">Vizyon & Misyon</span>
                     </Link>
                   </li>
                   <li className="d-none d-lg-block">
                     <Link href="/teslimat" className="text-decoration-none">
-                      <span className="text-black text-decoration-none mx-4 h6">Teslimat ve İade</span>
+                      <span className="text-black text-decoration-none mx-4 h6">Teslimat & İade</span>
                     </Link>
                   </li>
                 </ul>
@@ -188,7 +186,6 @@ const Navbar = async () => {
         </div>
       </div>
     </div>
-
   );
 };
 
