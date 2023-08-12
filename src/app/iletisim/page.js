@@ -73,7 +73,7 @@ function Page() {
                                     <FaWhatsapp size={60} className='contact-icon'/>
                                     <div className="contact-text">
                                         <h5>Whatsapp</h5>
-                                        <Link className='link-without-underline' className='link-without-underline' href="https://api.whatsapp.com/send/?phone=%2B905388265436&text=Merhaba%21++%C3%9Cr%C3%BCnleriniz+hakk%C4%B1nda+bilgi+almak+istiyorum.&type=phone_number&app_absent=0" target="_blank" >
+                                        <Link className='link-without-underline' href="https://api.whatsapp.com/send/?phone=%2B905388265436&text=Merhaba%21++%C3%9Cr%C3%BCnleriniz+hakk%C4%B1nda+bilgi+almak+istiyorum.&type=phone_number&app_absent=0" target="_blank" >
                                         <p>+90 538 826 54 36</p>
                                         </Link>
                                     </div>

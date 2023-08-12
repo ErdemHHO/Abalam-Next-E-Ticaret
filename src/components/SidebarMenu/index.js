@@ -11,7 +11,7 @@ function SidebarMenu({data}) {
 
   return (
     <div className='d-none d-lg-block'>
-      <ListGroup className='text-center mx-5'>
+      <ListGroup className='text-center mx-3'>
         <Link className='link-without-underline' href={"/urunler"} >
           <ListGroup.Item className='list-item'><span className='fw-bold'>Tüm Ürünler</span> </ListGroup.Item>
         </Link>

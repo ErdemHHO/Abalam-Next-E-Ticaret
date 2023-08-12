@@ -25,6 +25,36 @@ h5 {
   margin-bottom: 50px !important;
 }
 
+
+/************** ERROR AND NOT FOUND **************/
+
+.error{
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+
+/************** LOADING ANIMATION **************/
+
+.loadingCom{
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 2000px;
+  font-size: 50px;
+  font-weight: bold;
+  color: #056DB4;
+}
+
+.loading{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  width: 100px;
+  height: 100px;
+}
+
 /* slick-arrows.css dosyasında arrowların stilini değiştirme */
 
 /* Sol arrow stilini değiştirme */
@@ -211,3 +241,8 @@ h5 {
   color: #ffffff !important;
   background-color: #f08d06 !important;
 }
+
+/* 
+.list-item{
+  width: 100%;
+} */

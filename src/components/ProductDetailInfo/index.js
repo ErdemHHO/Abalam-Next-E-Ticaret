@@ -17,7 +17,7 @@ function index({data}) {
                 <span className={`${styles.price} text-success`}>{data.price} ₺</span> </span>
             </div>  
             <Link href={`https://api.whatsapp.com/send/?phone=%2B905388265436&text=Merhaba%21++${data.title}+hakk%C4%B1nda+bilgi+almak+istiyorum.&type=phone_number&app_absent=0`} target={'_blank'}>
-                <button type="button" class="btn btn-outline-success main fs-4"><FaWhatsapp className='m-1' />WhatsApp İle Sipariş</button>
+                <button type="button" className='btn btn-outline-success main fs-4'><FaWhatsapp className='m-1' />WhatsApp İle Sipariş</button>
             </Link>
         </div>
     </div>
