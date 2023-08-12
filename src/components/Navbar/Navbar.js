@@ -66,7 +66,7 @@ const Navbar = async () => {
                     <div className="collapse" id="productSubMenu">
                       <ul className="list-unstyled">
                         <li>
-                          <Link href="/" className="text-decoration-none">
+                          <Link href="/urunler" className="text-decoration-none">
                             <span className="small text-dark text-decoration-none p-2 d-block ms-4" data-bs-dismiss="offcanvas">
                               Tüm Ürünler
                             </span>
@@ -74,8 +74,8 @@ const Navbar = async () => {
                         </li>
                         {category &&
                           category.categories.map((item) => (
-                            <li key={item._id}>
-                              <Link href={`urunler/${item.slug}`} className="text-decoration-none">
+                            <li>
+                              <Link href={`/urunler/${item.slug}`}  className="text-decoration-none">
                                 <span className="small text-dark text-decoration-none p-2 d-block ms-4" data-bs-dismiss="offcanvas">
                                   {item.name}
                                 </span>
@@ -119,7 +119,7 @@ const Navbar = async () => {
                     {category &&
                       category.categories.map((item) => (
                         <li key={item._id}>
-                          <Link href={`urunler/${item.slug}`} className="text-decoration-none">
+                          <Link href={`/urunler/${item.slug}`} className="text-decoration-none">
                             <span className="dropdown-item">{item.name}</span>
                           </Link>
                         </li>

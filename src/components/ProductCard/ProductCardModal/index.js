@@ -17,7 +17,7 @@ function index({ show, onClose, product }) {
           <ModalSlider imageUrls={product.images} />
         </Modal.Body>
         <Modal.Footer className="text-center d-flex justify-content-center">
-          <Link href={product.slug}>
+          <Link href={`/${product.slug}`}>
             <Button variant="outline-warning">Ürün Sayfasına Git</Button>
           </Link>
         </Modal.Footer>

@@ -1,9 +1,10 @@
 // components/ProductCard.js
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./styles.module.css";
-import Image from "next/image";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { AiOutlineEye } from "react-icons/ai";
 import Button from "react-bootstrap/Button";
 import { AiFillCaretRight } from "react-icons/ai";
@@ -19,6 +20,11 @@ const ProductCard = ({ data }) => {
     setShow(true);
   };
 
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
+
   const product = {
     title: data.title,
     price: data.price,
@@ -31,7 +37,11 @@ const ProductCard = ({ data }) => {
   const shortenedTitle = product.title.length > 60 ? product.title.substring(0, 60) + "..." : product.title;
 
   return (
-    <div className="mt-2">
+    <div 
+    className="mt-2"
+    data-aos="fade-up"
+    data-aos-duration="1000" 
+    >
       <div className={`${styles.cardContainer} p-3 border rounded shadow-lg d-flex flex-column`}>
         <div className={styles["productCard"]}>
           <img src={product.hoverimage_urls} alt="Ürün Resmi" className="img-fluid" />
