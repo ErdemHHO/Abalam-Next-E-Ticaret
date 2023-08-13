@@ -1,5 +1,9 @@
 import React from "react";
 
+export const metadata = {
+  description: "About us page gives information about our site.",
+};
+
 async function Page() {
   return (
     <div className="main container">

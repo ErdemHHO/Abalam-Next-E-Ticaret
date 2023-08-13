@@ -6,6 +6,22 @@ import SimilarProductSlider from "../../components/SimilarProductSlider";
 
 import * as api from "../../api/index";
 
+export async function generateMetadata({ params: { icerik } }) {
+  // fetch data
+  const productData = await api.getProductDataById(icerik);
+
+  if (productData && productData.product) {
+    return {
+      description: productData.product[0].title,
+    };
+  }
+  return {
+    description: "Ürün not found",
+  };
+
+  // optionally access and extend (rather than replace) parent metadata
+}
+
 async function Page({ params: { icerik } }) {
   const productData = await api.getProductDataById(icerik);
   const similarProductData = await api.getProductByFavorite();
