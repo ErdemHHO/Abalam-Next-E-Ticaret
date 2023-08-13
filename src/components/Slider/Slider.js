@@ -18,8 +18,8 @@ const Slider2 = ({ announcements }) => {
         loop={true}
         autoplay={{ delay: 5000 }}
         scrollbar={{ draggable: true }}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}
+        // onSlideChange={() => console.log("slide change")}
+        // onSwiper={(swiper) => console.log(swiper)}
         effect={"cube"}
         cubeEffect={{
           shadow: true,

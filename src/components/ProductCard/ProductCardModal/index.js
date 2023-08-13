@@ -6,7 +6,6 @@ import ModalSlider from "./ModalSlider";
 import Link from "next/link";
 
 function index({ show, onClose, product }) {
-  console.log(product.slug);
   return (
     <div className="text-center">
       <Modal show={show} onHide={onClose}>

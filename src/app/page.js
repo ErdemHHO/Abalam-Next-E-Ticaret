@@ -10,6 +10,11 @@ import Slider from "../components/Slider/Slider";
 import * as api from "../api/index";
 import GetToKnowUs from "../components/GetToKnowUs/GetToKnowUs";
 
+export const metadata = {
+  title: "Abalam Turkiye",
+  description: "Abalam Turkiye Page description",
+};
+
 export default async function Home() {
   const commentData = await api.getCommentData();
   const productData = await api.getProductData();
@@ -18,15 +23,6 @@ export default async function Home() {
   return (
     <div>
       <Slider announcements={announcements.announcements} />
-      {/* <div className="container">
-        <div className="row">
-          {productData && productData.products.map((product) => (
-            <div className="col-12 col-sm-6 col-md-6 col-lg-3 my-1">
-              <ProductCard title="El Nino Lüx Oyuncaklı Müzikli..." old_price={product.old_price} price={product.price} image_urls={product.image_urls[0]} hoverimage_urls={product.image_urls[1] ? product.image_urls[1] : product.image_urls[0]} />
-            </div>
-          ))}
-        </div>
-      </div> */}
       <div className="main">
         <HomeCategoriesCard />
       </div>
