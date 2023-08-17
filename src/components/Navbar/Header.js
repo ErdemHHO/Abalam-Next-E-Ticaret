@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./styles.module.css";
 import Image from "next/image";
 import { AiFillMail } from "react-icons/ai";
-import { BsWhatsapp, BsInstagram, BsFacebook, BsTwitter } from "react-icons/bs";
+import { BsWhatsapp, BsInstagram, BsFacebook, BsTwitter, BsLinkedin } from "react-icons/bs";
 import { GrLanguage } from "react-icons/gr";
 import Link from "next/link";
 
@@ -32,6 +32,11 @@ const Header = () => {
               <li>
                 <Link href="https://www.twitter.com/abalamturkiye" target="_blank" className={`p-2 border-end ${styles.socialMedia}`}>
                   <BsTwitter className="p-1" style={{ fontSize: "24px", color: "black" }} />
+                </Link>
+              </li>
+              <li>
+                <Link href="https://www.linkedin.com/company/abalam" target="_blank" className={`p-2 border-end ${styles.socialMedia}`}>
+                  <BsLinkedin className="p-1" style={{ fontSize: "24px", color: "black" }} />
                 </Link>
               </li>
             </ul>

@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { BsWhatsapp, BsInstagram, BsFacebook, BsTwitter } from "react-icons/bs";
+import { BsWhatsapp, BsInstagram, BsFacebook, BsTwitter, BsLinkedin } from "react-icons/bs";
 import styles from "./styles.module.css";
 import Link from "next/link";
 
@@ -65,7 +65,7 @@ const Footer = () => {
           <p className="text-center"> © 2023 AbalamTurkiye. All Rights Reserved.</p>
         </div>
 
-        <div className={`d-flex ${styles.socialMedia}`}>
+        <div className={`d-flex me-1 ${styles.socialMedia}`}>
           <Link href="https://api.whatsapp.com/send/?phone=%2B905388265436&text=Merhaba%21++%C3%9Cr%C3%BCnleriniz+hakk%C4%B1nda+bilgi+almak+istiyorum.&type=phone_number&app_absent=0" target="_blank">
             <div className="whatsapp-icon border p-2 rounded-circle">
               <BsWhatsapp style={{ fontSize: "25px", color: "black" }} className="" />
@@ -85,6 +85,11 @@ const Footer = () => {
           <Link href="https://twitter.com/abalamturkiye" className="text-decoration-none" target="_blank">
             <div className="whatsapp-icon border p-2 rounded-circle">
               <BsTwitter style={{ color: "black", fontSize: "25px" }} className="" />
+            </div>
+          </Link>
+          <Link href="https://linkedin.com/company/abalam" className="text-decoration-none" target="_blank">
+            <div className="whatsapp-icon border p-2 rounded-circle">
+              <BsLinkedin style={{ color: "black", fontSize: "25px" }} className="" />
             </div>
           </Link>
         </div>
