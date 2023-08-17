@@ -39,13 +39,6 @@ const Navbar = async () => {
                     </Link>
                   </li>
                   <li className="list-unstyled border-bottom p-2">
-                    <Link href="/iletisim" className="text-decoration-none">
-                      <span className="small text-dark p-3" data-bs-dismiss="offcanvas">
-                        İletişim
-                      </span>
-                    </Link>
-                  </li>
-                  <li className="list-unstyled border-bottom p-2">
                     <Link href="/vizyon" className="text-decoration-none">
                       <span className="small text-dark p-3" data-bs-dismiss="offcanvas">
                         Vizyon ve Misyon
@@ -56,6 +49,13 @@ const Navbar = async () => {
                     <Link href="/teslimat" className="text-decoration-none">
                       <span className="small text-dark p-3" data-bs-dismiss="offcanvas">
                         Teslimat ve İade
+                      </span>
+                    </Link>
+                  </li>
+                  <li className="list-unstyled border-bottom p-2">
+                    <Link href="/iletisim" className="text-decoration-none">
+                      <span className="small text-dark p-3" data-bs-dismiss="offcanvas">
+                        İletişim
                       </span>
                     </Link>
                   </li>
@@ -164,11 +164,6 @@ const Navbar = async () => {
                       <span className="text-black text-decoration-none mx-4 h6">Hakkımızda</span>
                     </Link>
                   </li>
-                  <li>
-                    <Link href="/iletisim" className="text-decoration-none">
-                      <span className="text-black text-decoration-none mx-4 h6">İletişim</span>
-                    </Link>
-                  </li>
                   <li className="">
                     <Link href="/vizyon" className="text-decoration-none">
                       <span className="text-black text-decoration-none mx-4 h6">Vizyon & Misyon</span>
@@ -177,6 +172,11 @@ const Navbar = async () => {
                   <li className="d-none d-lg-block">
                     <Link href="/teslimat" className="text-decoration-none">
                       <span className="text-black text-decoration-none mx-4 h6">Teslimat & İade</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/iletisim" className="text-decoration-none">
+                      <span className="text-black text-decoration-none mx-4 h6">İletişim</span>
                     </Link>
                   </li>
                 </ul>
