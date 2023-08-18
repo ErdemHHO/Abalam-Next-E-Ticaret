@@ -1,5 +1,9 @@
 import React from "react";
 
+import Image from "next/image";
+
+import AboutUsSlider from "../../components/AboutUsSlider";
+
 export const metadata = {
   description: "About us page gives information about our site.",
 };
@@ -9,6 +13,9 @@ async function Page() {
     <div className="main container">
       <h2 className="text-center">Hakkımızda</h2>
       <hr />
+
+      <AboutUsSlider />
+
       <p>
         Abalam ailesi olarak kurulduğumuz günden itibaren yenilikçi bakış açımız ve genç girişimciler olarak müşterilerimize en iyi ve kaliteli hammaddeli ürünleri sunmayı hedefliyoruz.
         <br />
