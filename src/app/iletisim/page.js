@@ -43,8 +43,8 @@ function Page() {
                     <MdAttachEmail size={60} className="contact-icon" />
                     <div className="contact-text">
                       <h5>Email</h5>
-                      <Link className="link-without-underline" href="mailto:abalamturkiye@gmail.com?subject=%C3%9Cr%C3%BCnleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank">
-                        <p>abalamturkiye@gmail.com</p>
+                      <Link className="link-without-underline" href="mailto:info@abalamturkiye.com?subject=%C3%9Cr%C3%BCnleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank">
+                        <p>info@abalamturkiye.com</p>
                       </Link>
                     </div>
                   </div>

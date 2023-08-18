@@ -16,8 +16,8 @@ const Footer = () => {
             </div>
             <div className="mt-3">
               <p className={`text-dark ${styles.hoverOrange}`}>Esentepe, Küçük Sanayi Sitesi 2950. Sk., 34265 Sultangazi/İstanbul</p>
-              <Link href="mailto:abalamturkiye@gmail.com?subject=Ürünleriniz%20hakkında%20bilgi%20almak%20istiyorum." className="text-decoration-none">
-                <p className={`text-dark ${styles.hoverOrange}`}>abalamturkiye@gmail.com</p>
+              <Link href="mailto:info@abalamturkiye.com?subject=Ürünleriniz%20hakkında%20bilgi%20almak%20istiyorum." className="text-decoration-none">
+                <p className={`text-dark ${styles.hoverOrange}`}>info@abalamturkiye.com</p>
               </Link>
               <Link href="https://api.whatsapp.com/send/?phone=%2B905388265436&text=Merhaba%21++%C3%9Cr%C3%BCnleriniz+hakk%C4%B1nda+bilgi+almak+istiyorum.&type=phone_number&app_absent=0" target="_blank" className="text-decoration-none">
                 <p className={`text-dark ${styles.hoverOrange}`}>+90538 826 54 36</p>

@@ -44,9 +44,9 @@ const Header = () => {
           <div className="col-7 text-end">
             <div className="row">
               <ul>
-                <Link href="mailto:abalamturkiye@gmail.com?subject=Ürünleriniz%20hakkında%20bilgi%20almak%20istiyorum." className={`text-secondary text-decoration-none small d-none d-lg-inline border-start border-end px-4 py-2 ${styles.hoverOrange}`}>
+                <Link href="mailto:info@abalamturkiye.com?subject=Ürünleriniz%20hakkında%20bilgi%20almak%20istiyorum." className={`text-secondary text-decoration-none small d-none d-lg-inline border-start border-end px-4 py-2 ${styles.hoverOrange}`}>
                   <AiFillMail className="p-1" style={{ fontSize: "24px", color: "black", marginRight: "5px" }} />
-                  <span>abalamturkiye@gmail.com</span>
+                  <span>info@abalamturkiye.com</span>
                 </Link>
                 {/* <div className="btn-group">
                   <button className="d-none d-lg-inline border-0 bg-light btn-sm dropdown-toggle border-end px-3 p-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">

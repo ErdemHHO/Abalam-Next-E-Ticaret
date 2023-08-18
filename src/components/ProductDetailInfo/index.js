@@ -7,13 +7,16 @@ import { FaWhatsapp } from 'react-icons/fa';
 function index({ data }) {
 	let videoPath = '';
 
-  console.log
+  console.log(data.category_id)
 
 	if (data.category_id === '6473cf9533e26a521daf7381' && data.brand === 'Elnino') {
-		videoPath = '/videos/abalam-bebek-arabasi-kurulum-videosu.mp4';
-	} else if (data.category_id === '6473d0b033e26a521daf73aa') {
-		videoPath = '/videos/abalam-yurutec-kurulum-videosu.mp4';
-	} else {
+		videoPath = 'https://www.youtube.com/watch?v=K_FUvFCSMt8';
+	} else if (data.category_id === '6473d0b033e26a521daf73aa' && data.brand === 'El Nino' ) {
+		videoPath = 'https://www.youtube.com/watch?v=o4sXz45HTbU';
+	} else if(data.category_id === '6473d0ef33e26a521daf73af' && data.brand === 'Elnino'){
+		videoPath = 'https://www.youtube.com/watch?v=60OVhlPyZzU';
+	}
+	else {
 		videoPath = '';
 	}
 
