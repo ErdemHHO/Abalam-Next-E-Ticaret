@@ -11,7 +11,7 @@ import * as api from "../api/index";
 import GetToKnowUs from "../components/GetToKnowUs/GetToKnowUs";
 
 export const metadata = {
-  title: "Abalam Turkiye",
+  title: "abalam",
   description: "Abalam Turkiye HomePage",
 };
 
