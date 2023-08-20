@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Cabin&family=Edu+SA+Beginner:wght@400;500&family=Noto+Serif&family=Roboto:ital,wght@1,500&display=swap" rel="stylesheet" />
         <link rel="icon" href="./images/abalam-logo1.png" />
-        <title>Abalam Turkiye</title>
+        <title>abalam</title>
       </head>
       <body>
         <Header />

@@ -12,7 +12,7 @@ import GetToKnowUs from "../components/GetToKnowUs/GetToKnowUs";
 
 export const metadata = {
   title: "Abalam Turkiye",
-  description: "Abalam Turkiye Page description",
+  description: "Abalam Turkiye HomePage",
 };
 
 export default async function Home() {
