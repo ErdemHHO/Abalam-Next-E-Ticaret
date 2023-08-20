@@ -7,7 +7,7 @@ import SidebarMenu from "../../components/SidebarMenu";
 import * as api from "../../api/index";
 
 async function getSearchRequest(query) {
-  const res = await fetch(`https://abalamturkiye.com/api/product/search?q=${query}`, {
+  const res = await fetch(`https://abalamturkiye.net/api/product/search?q=${query}`, {
     cache: "no-store",
     headers: {
       "Content-Type": "application/json",
